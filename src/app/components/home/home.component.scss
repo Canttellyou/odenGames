@@ -1,0 +1,153 @@
+@import "src/styles.scss";
+
+.home-container {
+  background-color: orange;
+  background: linear-gradient(-45deg, #0e1b61, #8f41e2, #0e1b61, #8f41e2);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+.filters {
+  max-width: 1200px;
+  margin: 20px auto;
+  margin-top: 0;
+  padding-left: 16px;
+  padding-top: 20px;
+}
+
+::ng-deep {
+  .mat-form-field-infix {
+    background-color: $default-blue;
+  }
+
+  .mat-select-value,
+  .mat-select-arrow,
+  .mat-form-field-hide-placeholder .mat-select-placeholder,
+  .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: #fff !important;
+    opacity: 1;
+  }
+
+  .mat-form-field-infix {
+    border-color: #fff !important;
+    border-top: none;
+    padding-left: 5px !important;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-label {
+    padding-left: 5px;
+  }
+
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: #fff !important;
+  }
+}
+
+.games {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // max-width: 1200px;
+  // margin: 20px auto;
+  padding-top: 20px;
+}
+
+.game {
+  width: 280px;
+  margin: 10px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #202020;
+  box-shadow: 0px 3px 8px 0px #9170b4;
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 3px 11px 6px #9170b4;
+    transform: translateY(-3px);
+  }
+
+  &-thumb-container {
+    background-color: #000;
+    position: relative;
+    height: 60%;
+    color: #fff;
+    text-align: center;
+  }
+
+  &-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+  }
+
+  &-description {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 157px;
+  }
+
+  &-name {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &-platform {
+    width: 20px;
+    margin-right: 10px;
+  }
+}
+.pagination {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  justify-content: center;
+  button {
+    font-family: inherit;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #3f3f3f;
+    box-shadow: 0px 3px 8px 0px #9170b4;
+    transition: all 0.2s ease;
+    margin: 1rem 0;
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+.no-games {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.go-back {
+  font-family: inherit;
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+
+  cursor: pointer;
+  border: none;
+  background-color: #202020;
+  box-shadow: 0px 3px 8px 0px #9170b4;
+  transition: all 0.2s ease;
+  margin: 1rem 0;
+  margin-left: 2rem;
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
